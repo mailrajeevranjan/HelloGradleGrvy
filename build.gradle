@@ -1,0 +1,30 @@
+plugins {
+// Apply the Java plugin for compiling Java code 
+id 'java'
+// Apply the application plugin to add support for building an application
+id 'application'
+}
+group = 'com.example' 
+version = '1.0'
+repositories {
+// Use Maven Central for resolving dependencies. 
+mavenCentral()
+}
+dependencies {
+// Define your dependencies. For example, JUnit for testing: 
+testImplementation 'junit:junit:4.13.2'
+}
+//application {
+// Define the main class for the application. 
+//mainClass = 'com.example.App'
+//mainClass = 'App'
+//}
+// A custom task example: printing a greeting 
+task hello {
+doLast {
+println 'Hello, Gradle!'
+}
+}
+
+mainClassName = 'App'
+
